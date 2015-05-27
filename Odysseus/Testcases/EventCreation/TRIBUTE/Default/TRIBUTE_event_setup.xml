@@ -1,0 +1,27 @@
+<!-- 
+	TestCase#: case1
+	TestCase Name:  Sample Test
+	Description:  Sample test description
+	Design By: Caleb Solomon
+	Design Date: 30th April, 2014
+	Update Date: 30th April, 2014  
+ -->
+<testcase>
+    <setup>	 
+        <start>admin</start>
+    </setup>	
+	<execution>	  
+	    <step1 action= "goto" page="login"> </step1>  
+	    <step2 action= "admin_login" page="login"> </step2>
+	    <step3 action= "goto" page="start"> </step3>
+		<step4 action= "goto" page="eventselect"> </step4>
+		<step5 action= "goto" page="EventSetupWizard"></step5>
+		<step6 action= "TRIBUTE_event_setup" page="EventSetupWizard"> </step6>
+	</execution>	
+	
+	<validation>	  
+
+	</validation>
+</testcase>
+
+

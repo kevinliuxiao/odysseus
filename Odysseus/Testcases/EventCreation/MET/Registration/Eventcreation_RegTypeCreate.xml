@@ -1,0 +1,54 @@
+<!-- 
+	TestCase#: case1
+	TestCase Name:  Sample Test
+	Description:  Sample test description
+	Design By: Caleb Solomon
+	Design Date: 30th April, 2014
+	Update Date: 30th April, 2014  
+ -->
+<testcase>
+    <setup>	 
+        <start>admin</start>
+    </setup>	
+	<execution>	  
+	    <step1 action= "goto" page="login"> </step1>  
+	    <step2 action= "admin_login" page="login"> </step2>
+	    <step3 action= "goto" page="start"> </step3>
+		<step4 action= "goto" page="eventselect"> </step4>
+		<step5 action= "goto" page="EventSetupWizard"></step5>
+		<step6 action= "MET_event_setup" page="EventSetupWizard"> 
+	   		 <locations1>
+	   		 	<location_name>Toronto</location_name>
+	   		 </locations1>
+	   		 
+	   		 <locations2>
+	   		 	<location_name>Ottawa</location_name>
+	   		 </locations2>
+		</step6>
+		<step7 action= "goto" page="EventSummary"></step7>
+		<step8 action= "goto" page="EventRegTypeManage"></step8>
+		<step9 action= "goto" page="EventRegTypeIndSettings"></step9>
+		<step10 action= "create_new_registration_type_for_individuals" page="EventRegTypeIndSettings"></step10>
+		
+		<step11 action= "goto" page="EventRegTypeIndBizRules"></step11>
+		<step12 action= "setup_biz_rules" page="EventRegTypeIndBizRules"></step12>
+		<step13 action= "goto" page="EventRegTypeIndLocations"></step13>
+		<step14 action= "setup_locations" page="EventRegTypeIndLocations">
+			<locations1>
+				<displaychk>yes</displaychk>
+				<location_name>Toronto</location_name>
+	   		 </locations1>
+	   		 <locations2>
+	   		 	<displaychk>no</displaychk>
+	   		 	<location_name>Ottawa</location_name>
+	   		 </locations2>
+		</step14>
+		<step15 action= "goto" page="EventRegTypeManage"></step15>
+
+	</execution>	
+	
+	<validation>	  
+	</validation>
+</testcase>
+
+

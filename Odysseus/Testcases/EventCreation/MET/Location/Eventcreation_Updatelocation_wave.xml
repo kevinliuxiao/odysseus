@@ -1,0 +1,46 @@
+<!-- 
+	TestCase#: case1
+	TestCase Name:  Sample Test
+	Description:  Sample test description
+	Design By: Caleb Solomon
+	Design Date: 30th April, 2014
+	Update Date: 30th April, 2014  
+ -->
+<testcase>
+    <setup>	 
+        <start>admin</start>
+    </setup>	
+	<execution>	  
+	    <step1 action= "goto" page="login"> </step1>  
+	    <step2 action= "admin_login" page="login"> </step2>
+	    <step3 action= "goto" page="start"> </step3>
+		<step4 action= "goto" page="eventselect"> </step4>
+		<step5 action= "goto" page="EventSetupWizard"></step5>
+		<step6 action= "MET_event_setup" page="EventSetupWizard"> 
+	   		 <locations1>
+	   		 	<location_name>Toronto</location_name>
+	   		 </locations1>
+	   		 
+	   		 <locations2>
+	   		 	<location_name>Ottawa</location_name>
+	   		 </locations2>
+		</step6>
+		<step7 action= "goto" page="EventSummary"></step7>
+		<step8 action= "goto" page="EventLocations">
+			<edit_location_name>Ottawa</edit_location_name>
+		</step8>
+		<step9 action= "goto" page="EventLocationDetails"></step9>
+		<step10 action= "goto" page="EventLocationUpdateContent"></step10>
+		<step11 action= "create_new_location" page="EventLocationUpdateContent"></step11>
+		<step12 action= "goto" page="EventLocationDetails"></step12>
+		<step13 action= "goto" page="EventLocationUpdateDetails"></step13>
+		<step14 action= "create_wave" page="EventLocationUpdateDetails"></step14>
+		<step15 action= "setup_location_event_details" page="EventLocationUpdateDetails"></step15>
+		<step16 action= "goto" page="EventLocationDetails"></step16>
+		
+	</execution>	
+	
+	<validation>	  
+
+	</validation>
+</testcase>
